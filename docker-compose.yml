@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ~/dev/tgbot/app:/var/lib/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: tgbot
+      POSTGRES_USER: tgbot
+      POSTGRES_DB: tgbot
