@@ -15,6 +15,7 @@ services:
   tgbot:
     build:
       dockerfile: Dockerfile
+    restart: always
     volumes:
       - ./data/media:/data/media
     environment:
