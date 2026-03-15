@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	dataDir = "/Users/vk/dev/tgbot/data"
+	dataDir = "./data"
 )
 
 func main() {
