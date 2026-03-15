@@ -1,4 +1,5 @@
-FROM golang:alpine AS bulder
+FROM golang:alpine
+ENV TG_BOT_TOKEN=token
 WORKDIR /build
 COPY go.mod go.sum ./
 RUN go mod download
