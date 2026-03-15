@@ -11,8 +11,6 @@ services:
       POSTGRES_PASSWORD: tournament
       POSTGRES_USER: tournament
       POSTGRES_DB: tournament
-    networks:
-      - backend-network
 
   tgbot:
     build:
@@ -21,9 +19,3 @@ services:
       - ./data/media:/data/media
     environment:
       - TG_BOT_TOKEN=${TG_BOT_TOKEN}
-    networks:
-      - backend-network
-
-  networks:
-    backend-network:
-      drirver: bridge
