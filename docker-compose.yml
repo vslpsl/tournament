@@ -3,10 +3,18 @@ services:
     image: postgres:latest
     restart: always
     volumes:
-      - ~/dev/tgbot/app:/var/lib/postgresql
+      - ./data/postgresql:/var/lib/postgresql
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: tgbot
-      POSTGRES_USER: tgbot
-      POSTGRES_DB: tgbot
+      POSTGRES_PASSWORD: tournament
+      POSTGRES_USER: tournament
+      POSTGRES_DB: tournament
+
+  tgbot:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/media:/data/media
+    environment:
+      - TG_BOT_TOKEN=${TG_BOT_TOKEN}

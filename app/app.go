@@ -20,7 +20,7 @@ type App struct {
 }
 
 func NewApp(dataDir string) (*App, error) {
-	connStr := "postgres://tgbot:tgbot@localhost:5432/tgbot?sslmode=disable"
+	connStr := "postgres://tournament:tournament@localhost:5432/tournament?sslmode=disable"
 
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer

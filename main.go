@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	dataDir = "./data"
+	dataDir = "./data/media"
 )
 
 func main() {
